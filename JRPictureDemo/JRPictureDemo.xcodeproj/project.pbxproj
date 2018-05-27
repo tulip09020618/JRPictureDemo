@@ -15,6 +15,7 @@
 		653B9FB920BA8338004A5CBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FB820BA8338004A5CBA /* main.m */; };
 		653B9FC320BA833A004A5CBA /* JRPictureDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FC220BA833A004A5CBA /* JRPictureDemoTests.m */; };
 		653B9FCE20BA833A004A5CBA /* JRPictureDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FCD20BA833A004A5CBA /* JRPictureDemoUITests.m */; };
+		653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		653B9FC920BA833A004A5CBA /* JRPictureDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JRPictureDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653B9FCD20BA833A004A5CBA /* JRPictureDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureDemoUITests.m; sourceTree = "<group>"; };
 		653B9FCF20BA833A004A5CBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureFlowLayout.h; sourceTree = "<group>"; };
+		653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				653B9FAA20BA8333004A5CBA /* AppDelegate.m */,
 				653B9FAC20BA8333004A5CBA /* ViewController.h */,
 				653B9FAD20BA8333004A5CBA /* ViewController.m */,
+				653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */,
+				653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */,
 				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
 				653B9FB220BA8338004A5CBA /* Assets.xcassets */,
 				653B9FB420BA8338004A5CBA /* LaunchScreen.storyboard */,
@@ -264,6 +269,7 @@
 			files = (
 				653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */,
 				653B9FB920BA8338004A5CBA /* main.m in Sources */,
+				653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */,
 				653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
