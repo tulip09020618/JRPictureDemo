@@ -16,6 +16,10 @@
 		653B9FC320BA833A004A5CBA /* JRPictureDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FC220BA833A004A5CBA /* JRPictureDemoTests.m */; };
 		653B9FCE20BA833A004A5CBA /* JRPictureDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FCD20BA833A004A5CBA /* JRPictureDemoUITests.m */; };
 		653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */; };
+		653B9FE020BAA9EA004A5CBA /* JRXMLDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FDF20BAA9EA004A5CBA /* JRXMLDataParser.m */; };
+		653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FE520BAAD1F004A5CBA /* JRPictureModel.m */; };
+		653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */; };
+		653B9FEB20BAD372004A5CBA /* JRPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,13 @@
 		653B9FCF20BA833A004A5CBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureFlowLayout.h; sourceTree = "<group>"; };
 		653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureFlowLayout.m; sourceTree = "<group>"; };
+		653B9FDE20BAA9EA004A5CBA /* JRXMLDataParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRXMLDataParser.h; sourceTree = "<group>"; };
+		653B9FDF20BAA9EA004A5CBA /* JRXMLDataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRXMLDataParser.m; sourceTree = "<group>"; };
+		653B9FE420BAAD1F004A5CBA /* JRPictureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureModel.h; sourceTree = "<group>"; };
+		653B9FE520BAAD1F004A5CBA /* JRPictureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureModel.m; sourceTree = "<group>"; };
+		653B9FE720BAD372004A5CBA /* JRPictureCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRPictureCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +115,12 @@
 		653B9FA820BA8333004A5CBA /* JRPictureDemo */ = {
 			isa = PBXGroup;
 			children = (
+				653B9FEF20BAD84A004A5CBA /* Utils */,
+				653B9FEE20BAD819004A5CBA /* Model */,
+				653B9FED20BAD811004A5CBA /* View */,
+				653B9FEC20BAD801004A5CBA /* Controller */,
 				653B9FA920BA8333004A5CBA /* AppDelegate.h */,
 				653B9FAA20BA8333004A5CBA /* AppDelegate.m */,
-				653B9FAC20BA8333004A5CBA /* ViewController.h */,
-				653B9FAD20BA8333004A5CBA /* ViewController.m */,
-				653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */,
-				653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */,
-				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
 				653B9FB220BA8338004A5CBA /* Assets.xcassets */,
 				653B9FB420BA8338004A5CBA /* LaunchScreen.storyboard */,
 				653B9FB720BA8338004A5CBA /* Info.plist */,
@@ -135,6 +145,46 @@
 				653B9FCF20BA833A004A5CBA /* Info.plist */,
 			);
 			path = JRPictureDemoUITests;
+			sourceTree = "<group>";
+		};
+		653B9FEC20BAD801004A5CBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				653B9FAC20BA8333004A5CBA /* ViewController.h */,
+				653B9FAD20BA8333004A5CBA /* ViewController.m */,
+				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		653B9FED20BAD811004A5CBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				653B9FE720BAD372004A5CBA /* JRPictureCollectionViewCell.h */,
+				653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */,
+				653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		653B9FEE20BAD819004A5CBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				653B9FE420BAAD1F004A5CBA /* JRPictureModel.h */,
+				653B9FE520BAAD1F004A5CBA /* JRPictureModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		653B9FEF20BAD84A004A5CBA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */,
+				653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */,
+				653B9FDE20BAA9EA004A5CBA /* JRXMLDataParser.h */,
+				653B9FDF20BAA9EA004A5CBA /* JRXMLDataParser.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +249,7 @@
 		653B9F9E20BA8333004A5CBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JR;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = tulip;
 				TargetAttributes = {
@@ -243,6 +294,7 @@
 				653B9FB620BA8338004A5CBA /* LaunchScreen.storyboard in Resources */,
 				653B9FB320BA8338004A5CBA /* Assets.xcassets in Resources */,
 				653B9FB120BA8333004A5CBA /* Main.storyboard in Resources */,
+				653B9FEB20BAD372004A5CBA /* JRPictureCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +321,10 @@
 			files = (
 				653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */,
 				653B9FB920BA8338004A5CBA /* main.m in Sources */,
+				653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */,
 				653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */,
+				653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */,
+				653B9FE020BAA9EA004A5CBA /* JRXMLDataParser.m in Sources */,
 				653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
