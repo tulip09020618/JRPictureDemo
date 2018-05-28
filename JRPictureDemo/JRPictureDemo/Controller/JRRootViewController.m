@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  JRRootViewController.m
 //  JRPictureDemo
 //
-//  Created by hqtech on 2018/5/27.
+//  Created by hqtech on 2018/5/28.
 //  Copyright © 2018年 tulip. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JRRootViewController.h"
 #import "JRPictureFlowLayout.h"
 #import "JRXMLDataParser.h"
 #import "JRPictureCollectionViewCell.h"
@@ -15,7 +15,7 @@
 
 static NSString *cellID = @"cellID";
 
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, JRPictureAnimatorPresentDelegate>
+@interface JRRootViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, JRPictureAnimatorPresentDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -28,7 +28,7 @@ static NSString *cellID = @"cellID";
 
 @end
 
-@implementation ViewController
+@implementation JRRootViewController
 
 - (JRPictureAnimator *)animator {
     if (_animator == nil) {
@@ -39,17 +39,19 @@ static NSString *cellID = @"cellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    // 自定义瀑布流布局
     JRPictureFlowLayout *layout = [[JRPictureFlowLayout alloc] init];
+    // 动态获取cell高度
     layout.itemHeightBlock = ^CGFloat(CGFloat itemWidth, NSIndexPath *indexPath) {
         JRPictureModel *model = self.dataSource[indexPath.item];
         if (model.thumbImg == nil) {
             return 100;
         }else {
-            return itemWidth * model.thumbSize.height / model.thumbSize.width;
+            return itemWidth * model.thumbImg.size.height / model.thumbImg.size.width;
         }
     };
     self.collectionView.collectionViewLayout = layout;
@@ -58,7 +60,6 @@ static NSString *cellID = @"cellID";
     
     // 加载数据
     [self loadData];
-    
 }
 
 #pragma mark 加载数据
@@ -67,6 +68,7 @@ static NSString *cellID = @"cellID";
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.label.text = @"正在加载数据";
     
+    // 获取并解析xml数据
     JRXMLDataParser *parser = [[JRXMLDataParser alloc] init];
     parser.parseComplete = ^(NSArray *pictureModels) {
         // 解析完成
@@ -169,17 +171,15 @@ static NSString *cellID = @"cellID";
             // 下载图片
             NSError *error;
             [NSData dataWithContentsOfURL:url options:0 error:&error];
-            while (error != nil) {
+            if (error != nil) {
                 NSLog(@"下载图片错误：%@", error);
                 [NSData dataWithContentsOfURL:url options:0 error:&error];
             }
             NSData *imgData = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:imgData];
             model.originalImg = image;
-            model.originalSize = image.size;
             UIImage *thumbImg = [self compressImageWith:image];
             model.thumbImg = thumbImg;
-            model.thumbSize = thumbImg.size;
             
             dispatch_queue_t mainQueue = dispatch_get_main_queue();
             //异步返回主线程，更新UI

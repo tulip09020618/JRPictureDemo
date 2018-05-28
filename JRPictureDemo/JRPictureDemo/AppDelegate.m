@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "JRLaunchScreenView.h"
+#import "JRRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    JRRootViewController *rootVC = [[JRRootViewController alloc] initWithNibName:@"JRRootViewController" bundle:nil];
+    self.window.rootViewController = rootVC;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    NSArray *nibArr = [[NSBundle mainBundle] loadNibNamed:@"JRLaunchScreenView" owner:nil options:nil];
+    JRLaunchScreenView *launchView = nibArr[0];
+    launchView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    [self.window addSubview:launchView];
+    
     return YES;
 }
 

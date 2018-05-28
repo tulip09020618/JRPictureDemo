@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650A879420BBF253005F8CDB /* launchImg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 650A879320BBF253005F8CDB /* launchImg.svg */; };
 		653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FAA20BA8333004A5CBA /* AppDelegate.m */; };
 		653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FAD20BA8333004A5CBA /* ViewController.m */; };
 		653B9FB120BA8333004A5CBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653B9FAF20BA8333004A5CBA /* Main.storyboard */; };
@@ -22,6 +23,10 @@
 		653B9FEB20BAD372004A5CBA /* JRPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */; };
 		65435E6A20BBA738008DFDAF /* JRBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */; };
 		65435E6D20BBAE2C008DFDAF /* JRPictureAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */; };
+		65435E7B20BBE795008DFDAF /* JRLaunchScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E7A20BBE795008DFDAF /* JRLaunchScreenView.m */; };
+		65435E7D20BBE7AE008DFDAF /* JRLaunchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65435E7C20BBE7AE008DFDAF /* JRLaunchScreenView.xib */; };
+		65435E8120BBE9AD008DFDAF /* JRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E7F20BBE9AD008DFDAF /* JRRootViewController.m */; };
+		65435E8220BBE9AD008DFDAF /* JRRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65435E8020BBE9AD008DFDAF /* JRRootViewController.xib */; };
 		EC875FE034941868AA27B407 /* libPods-JRPictureDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C364538F0BE36CA631771F7 /* libPods-JRPictureDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650A879320BBF253005F8CDB /* launchImg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = launchImg.svg; sourceTree = "<group>"; };
 		653B9FA620BA8333004A5CBA /* JRPictureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRPictureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653B9FA920BA8333004A5CBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		653B9FAA20BA8333004A5CBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +79,12 @@
 		65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRBigPictureViewController.m; sourceTree = "<group>"; };
 		65435E6B20BBAE2C008DFDAF /* JRPictureAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureAnimator.h; sourceTree = "<group>"; };
 		65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureAnimator.m; sourceTree = "<group>"; };
+		65435E7920BBE795008DFDAF /* JRLaunchScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLaunchScreenView.h; sourceTree = "<group>"; };
+		65435E7A20BBE795008DFDAF /* JRLaunchScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLaunchScreenView.m; sourceTree = "<group>"; };
+		65435E7C20BBE7AE008DFDAF /* JRLaunchScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRLaunchScreenView.xib; sourceTree = "<group>"; };
+		65435E7E20BBE9AD008DFDAF /* JRRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRRootViewController.h; sourceTree = "<group>"; };
+		65435E7F20BBE9AD008DFDAF /* JRRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRRootViewController.m; sourceTree = "<group>"; };
+		65435E8020BBE9AD008DFDAF /* JRRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRRootViewController.xib; sourceTree = "<group>"; };
 		6C364538F0BE36CA631771F7 /* libPods-JRPictureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JRPictureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5408DCF4CE97EBB65413E /* Pods-JRPictureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRPictureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ADAE29CB24FA7199037A9D1D /* Pods-JRPictureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRPictureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +124,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		650A878C20BBECA3005F8CDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				650A879320BBF253005F8CDB /* launchImg.svg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		653B9F9D20BA8333004A5CBA = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +157,16 @@
 		653B9FA820BA8333004A5CBA /* JRPictureDemo */ = {
 			isa = PBXGroup;
 			children = (
+				650A878C20BBECA3005F8CDB /* Resources */,
 				653B9FEF20BAD84A004A5CBA /* Utils */,
 				653B9FEE20BAD819004A5CBA /* Model */,
 				653B9FED20BAD811004A5CBA /* View */,
 				653B9FEC20BAD801004A5CBA /* Controller */,
 				653B9FA920BA8333004A5CBA /* AppDelegate.h */,
 				653B9FAA20BA8333004A5CBA /* AppDelegate.m */,
+				653B9FAC20BA8333004A5CBA /* ViewController.h */,
+				653B9FAD20BA8333004A5CBA /* ViewController.m */,
+				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
 				653B9FB220BA8338004A5CBA /* Assets.xcassets */,
 				653B9FB420BA8338004A5CBA /* LaunchScreen.storyboard */,
 				653B9FB720BA8338004A5CBA /* Info.plist */,
@@ -172,9 +196,9 @@
 		653B9FEC20BAD801004A5CBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				653B9FAC20BA8333004A5CBA /* ViewController.h */,
-				653B9FAD20BA8333004A5CBA /* ViewController.m */,
-				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
+				65435E7E20BBE9AD008DFDAF /* JRRootViewController.h */,
+				65435E7F20BBE9AD008DFDAF /* JRRootViewController.m */,
+				65435E8020BBE9AD008DFDAF /* JRRootViewController.xib */,
 				65435E6820BBA738008DFDAF /* JRBigPictureViewController.h */,
 				65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */,
 			);
@@ -187,6 +211,9 @@
 				653B9FE720BAD372004A5CBA /* JRPictureCollectionViewCell.h */,
 				653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */,
 				653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */,
+				65435E7920BBE795008DFDAF /* JRLaunchScreenView.h */,
+				65435E7A20BBE795008DFDAF /* JRLaunchScreenView.m */,
+				65435E7C20BBE7AE008DFDAF /* JRLaunchScreenView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,9 +357,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65435E8220BBE9AD008DFDAF /* JRRootViewController.xib in Resources */,
 				653B9FB620BA8338004A5CBA /* LaunchScreen.storyboard in Resources */,
 				653B9FB320BA8338004A5CBA /* Assets.xcassets in Resources */,
+				650A879420BBF253005F8CDB /* launchImg.svg in Resources */,
 				653B9FB120BA8333004A5CBA /* Main.storyboard in Resources */,
+				65435E7D20BBE7AE008DFDAF /* JRLaunchScreenView.xib in Resources */,
 				653B9FEB20BAD372004A5CBA /* JRPictureCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,11 +442,13 @@
 				65435E6A20BBA738008DFDAF /* JRBigPictureViewController.m in Sources */,
 				653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */,
 				653B9FB920BA8338004A5CBA /* main.m in Sources */,
+				65435E7B20BBE795008DFDAF /* JRLaunchScreenView.m in Sources */,
 				653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */,
 				653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */,
 				653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */,
 				65435E6D20BBAE2C008DFDAF /* JRPictureAnimator.m in Sources */,
 				653B9FE020BAA9EA004A5CBA /* JRXMLDataParser.m in Sources */,
+				65435E8120BBE9AD008DFDAF /* JRRootViewController.m in Sources */,
 				653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,13 +623,14 @@
 				DEVELOPMENT_TEAM = K57F93BM5Q;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRPictureDemo/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = JRPictureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRPictureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,13 +643,14 @@
 				DEVELOPMENT_TEAM = K57F93BM5Q;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRPictureDemo/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = JRPictureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRPictureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
