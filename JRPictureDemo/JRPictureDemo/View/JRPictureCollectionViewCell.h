@@ -10,7 +10,8 @@
 
 @interface JRPictureCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy) NSString *content;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		650A879420BBF253005F8CDB /* launchImg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 650A879320BBF253005F8CDB /* launchImg.svg */; };
+		650A879720BC0458005F8CDB /* JRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 650A879620BC0457005F8CDB /* JRUtils.m */; };
+		650A879920BC16A9005F8CDB /* default_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 650A879820BC16A9005F8CDB /* default_img.png */; };
 		653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FAA20BA8333004A5CBA /* AppDelegate.m */; };
 		653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FAD20BA8333004A5CBA /* ViewController.m */; };
 		653B9FB120BA8333004A5CBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653B9FAF20BA8333004A5CBA /* Main.storyboard */; };
@@ -49,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		650A879320BBF253005F8CDB /* launchImg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = launchImg.svg; sourceTree = "<group>"; };
+		650A879520BC0457005F8CDB /* JRUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRUtils.h; sourceTree = "<group>"; };
+		650A879620BC0457005F8CDB /* JRUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRUtils.m; sourceTree = "<group>"; };
+		650A879820BC16A9005F8CDB /* default_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_img.png; sourceTree = "<group>"; };
 		653B9FA620BA8333004A5CBA /* JRPictureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRPictureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653B9FA920BA8333004A5CBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		653B9FAA20BA8333004A5CBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				650A879320BBF253005F8CDB /* launchImg.svg */,
+				650A879820BC16A9005F8CDB /* default_img.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 				653B9FDF20BAA9EA004A5CBA /* JRXMLDataParser.m */,
 				65435E6B20BBAE2C008DFDAF /* JRPictureAnimator.h */,
 				65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */,
+				650A879520BC0457005F8CDB /* JRUtils.h */,
+				650A879620BC0457005F8CDB /* JRUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -360,6 +368,7 @@
 				65435E8220BBE9AD008DFDAF /* JRRootViewController.xib in Resources */,
 				653B9FB620BA8338004A5CBA /* LaunchScreen.storyboard in Resources */,
 				653B9FB320BA8338004A5CBA /* Assets.xcassets in Resources */,
+				650A879920BC16A9005F8CDB /* default_img.png in Resources */,
 				650A879420BBF253005F8CDB /* launchImg.svg in Resources */,
 				653B9FB120BA8333004A5CBA /* Main.storyboard in Resources */,
 				65435E7D20BBE7AE008DFDAF /* JRLaunchScreenView.xib in Resources */,
@@ -444,6 +453,7 @@
 				653B9FB920BA8338004A5CBA /* main.m in Sources */,
 				65435E7B20BBE795008DFDAF /* JRLaunchScreenView.m in Sources */,
 				653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */,
+				650A879720BC0458005F8CDB /* JRUtils.m in Sources */,
 				653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */,
 				653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */,
 				65435E6D20BBAE2C008DFDAF /* JRPictureAnimator.m in Sources */,

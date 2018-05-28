@@ -46,12 +46,17 @@ static NSString *cellID = @"cellID";
     // 自定义瀑布流布局
     JRPictureFlowLayout *layout = [[JRPictureFlowLayout alloc] init];
     // 动态获取cell高度
-    layout.itemHeightBlock = ^CGFloat(CGFloat itemWidth, NSIndexPath *indexPath) {
+    layout.itemHeightBlock = ^CGFloat(CGFloat itemWidth, NSIndexPath *indexPath, CGFloat width) {
         JRPictureModel *model = self.dataSource[indexPath.item];
+        CGFloat titleH = [JRUtils getHeight:model.title fontSize:17 width:width];
+        CGFloat contentH = [JRUtils getHeight:model.content fontSize:12 width:width];
+        
         if (model.thumbImg == nil) {
-            return 100;
+            // 默认图片的高度
+            CGFloat defaultH = width;
+            return (titleH + contentH + defaultH);
         }else {
-            return itemWidth * model.thumbImg.size.height / model.thumbImg.size.width;
+            return (itemWidth * model.thumbImg.size.height / model.thumbImg.size.width + titleH + contentH);
         }
     };
     self.collectionView.collectionViewLayout = layout;
@@ -104,25 +109,25 @@ static NSString *cellID = @"cellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JRPictureCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor purpleColor];
     
     JRPictureModel *model = self.dataSource[indexPath.item];
-    cell.titleLabel.text = model.title;
+    // 设置标题
+    cell.title = model.title;
+    // 设置内容
+    cell.content = model.content;
     
+    UIImage *image = [UIImage imageNamed:@"default_img"];
     if (model.thumbImg != nil) {
-        cell.imgView.image = model.thumbImg;
-        
-        // 绘制圆角
-        CGRect rect = CGRectMake(0, 0, model.thumbImg.size.width, model.thumbImg.size.height);
-        UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
-        [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:10.0] addClip];
-        [cell.imgView.image drawInRect:rect];
-        cell.imgView.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-    }else {
-        cell.imgView.image = nil;
+        image = model.thumbImg;
     }
+    cell.imgView.image = image;
+    // 绘制圆角
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:10.0] addClip];
+    [image drawInRect:rect];
+    cell.imgView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     return cell;
 }
@@ -131,13 +136,14 @@ static NSString *cellID = @"cellID";
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     JRPictureModel *model = self.dataSource[indexPath.item];
-    if (model.originalImg == nil) {
-        return;
+    UIImage *image = [UIImage imageNamed:@"default_img"];
+    if (model.originalImg != nil) {
+        image = model.originalImg;
     }
     
     // 查看大图
     JRBigPictureViewController *bigPictureVC = [[JRBigPictureViewController alloc] init];
-    bigPictureVC.image = model.originalImg;
+    bigPictureVC.image = image;
     // 自定义转场动画
     bigPictureVC.modalPresentationStyle = UIModalPresentationCustom;
     bigPictureVC.transitioningDelegate = self.animator;
@@ -226,7 +232,7 @@ static NSString *cellID = @"cellID";
 - (CGRect)presentStartRect:(NSIndexPath *)indexPath {
     JRPictureCollectionViewCell *cell = (JRPictureCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     
-    CGRect rect = [self.collectionView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
+    CGRect rect = [cell convertRect:cell.imgView.frame toView:[UIApplication sharedApplication].keyWindow];
     return rect;
 }
 
@@ -234,7 +240,11 @@ static NSString *cellID = @"cellID";
 - (CGRect)presentEndRect:(NSIndexPath *)indexPath {
     // 获取img
     JRPictureModel *model = self.dataSource[indexPath.item];
-    UIImage *img = model.originalImg;
+    
+    UIImage *img = [UIImage imageNamed:@"default_img"];
+    if (model.originalImg != nil) {
+        img = model.originalImg;
+    }
     // 计算imgView动画结束时的位置
     CGFloat x = 0;
     CGFloat y = 0;
@@ -249,7 +259,12 @@ static NSString *cellID = @"cellID";
     JRPictureModel *model = self.dataSource[indexPath.item];
     
     UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.image = model.thumbImg;
+    
+    if (model.thumbImg != nil) {
+        imgView.image = model.thumbImg;
+    }else {
+        imgView.image = [UIImage imageNamed:@"default_img"];
+    }
     
     return imgView;
 }

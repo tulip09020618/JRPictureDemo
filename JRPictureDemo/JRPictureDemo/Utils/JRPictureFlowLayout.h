@@ -13,6 +13,6 @@
 /**
  获取cell高度
  */
-@property (nonatomic, copy) CGFloat (^ itemHeightBlock) (CGFloat itemWidth, NSIndexPath *indexPath);
+@property (nonatomic, copy) CGFloat (^ itemHeightBlock) (CGFloat itemWidth, NSIndexPath *indexPath, CGFloat width);
 
 @end

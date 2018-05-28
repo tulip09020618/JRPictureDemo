@@ -93,7 +93,7 @@ static const NSInteger colsCount = 2;
     // cell高度
     CGFloat cellH = 100;
     if (self.itemHeightBlock) {
-        cellH = self.itemHeightBlock(cellW, indexPath);
+        cellH = self.itemHeightBlock(cellW, indexPath, cellW);
     }
     
     // 找出最短的一列和该列的最大Y值(将新的cell添加到最短一列)
