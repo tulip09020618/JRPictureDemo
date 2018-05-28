@@ -109,6 +109,15 @@ static NSString *cellID = @"cellID";
     
     if (model.thumbImg != nil) {
         cell.imgView.image = model.thumbImg;
+        
+        // 绘制圆角
+        CGRect rect = CGRectMake(0, 0, model.thumbImg.size.width, model.thumbImg.size.height);
+        UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+        [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:10.0] addClip];
+        [cell.imgView.image drawInRect:rect];
+        cell.imgView.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
     }else {
         cell.imgView.image = nil;
     }
