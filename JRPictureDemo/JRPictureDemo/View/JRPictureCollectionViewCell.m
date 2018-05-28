@@ -15,4 +15,9 @@
     // Initialization code
 }
 
+- (void)dealloc {
+    NSLog(@"cell dealloc");
+    self.imgView = nil;
+}
+
 @end

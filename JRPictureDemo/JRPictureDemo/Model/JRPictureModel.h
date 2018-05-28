@@ -17,4 +17,24 @@
 
 @property (nonatomic, copy) NSString *imgUrl;
 
+/**
+ 原始图片
+ */
+@property (nonatomic, strong) UIImage *originalImg;
+
+/**
+ 原始图片大小
+ */
+@property (nonatomic, assign) CGSize originalSize;
+
+/**
+ 缩略图
+ */
+@property (nonatomic, strong) UIImage *thumbImg;
+
+/**
+ 缩略图大小
+ */
+@property (nonatomic, assign) CGSize thumbSize;
+
 @end

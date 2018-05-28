@@ -20,6 +20,9 @@
 		653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FE520BAAD1F004A5CBA /* JRPictureModel.m */; };
 		653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */; };
 		653B9FEB20BAD372004A5CBA /* JRPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */; };
+		65435E6A20BBA738008DFDAF /* JRBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */; };
+		65435E6D20BBAE2C008DFDAF /* JRPictureAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */; };
+		EC875FE034941868AA27B407 /* libPods-JRPictureDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C364538F0BE36CA631771F7 /* libPods-JRPictureDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,14 @@
 		653B9FE720BAD372004A5CBA /* JRPictureCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureCollectionViewCell.h; sourceTree = "<group>"; };
 		653B9FE820BAD372004A5CBA /* JRPictureCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureCollectionViewCell.m; sourceTree = "<group>"; };
 		653B9FE920BAD372004A5CBA /* JRPictureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRPictureCollectionViewCell.xib; sourceTree = "<group>"; };
+		653B9FF020BADA64004A5CBA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		65435E6820BBA738008DFDAF /* JRBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRBigPictureViewController.h; sourceTree = "<group>"; };
+		65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRBigPictureViewController.m; sourceTree = "<group>"; };
+		65435E6B20BBAE2C008DFDAF /* JRPictureAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRPictureAnimator.h; sourceTree = "<group>"; };
+		65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRPictureAnimator.m; sourceTree = "<group>"; };
+		6C364538F0BE36CA631771F7 /* libPods-JRPictureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JRPictureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B5408DCF4CE97EBB65413E /* Pods-JRPictureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRPictureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAE29CB24FA7199037A9D1D /* Pods-JRPictureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRPictureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC875FE034941868AA27B407 /* libPods-JRPictureDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19BDB02D2C77F67A3D737F9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C364538F0BE36CA631771F7 /* libPods-JRPictureDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		653B9F9D20BA8333004A5CBA = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,8 @@
 				653B9FC120BA833A004A5CBA /* JRPictureDemoTests */,
 				653B9FCC20BA833A004A5CBA /* JRPictureDemoUITests */,
 				653B9FA720BA8333004A5CBA /* Products */,
+				6829F44545022C403E11C312 /* Pods */,
+				19BDB02D2C77F67A3D737F9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +175,8 @@
 				653B9FAC20BA8333004A5CBA /* ViewController.h */,
 				653B9FAD20BA8333004A5CBA /* ViewController.m */,
 				653B9FAF20BA8333004A5CBA /* Main.storyboard */,
+				65435E6820BBA738008DFDAF /* JRBigPictureViewController.h */,
+				65435E6920BBA738008DFDAF /* JRBigPictureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,12 +203,24 @@
 		653B9FEF20BAD84A004A5CBA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				653B9FF020BADA64004A5CBA /* PrefixHeader.pch */,
 				653B9FDB20BA941B004A5CBA /* JRPictureFlowLayout.h */,
 				653B9FDC20BA941B004A5CBA /* JRPictureFlowLayout.m */,
 				653B9FDE20BAA9EA004A5CBA /* JRXMLDataParser.h */,
 				653B9FDF20BAA9EA004A5CBA /* JRXMLDataParser.m */,
+				65435E6B20BBAE2C008DFDAF /* JRPictureAnimator.h */,
+				65435E6C20BBAE2C008DFDAF /* JRPictureAnimator.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6829F44545022C403E11C312 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87B5408DCF4CE97EBB65413E /* Pods-JRPictureDemo.debug.xcconfig */,
+				ADAE29CB24FA7199037A9D1D /* Pods-JRPictureDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653B9FD220BA833A004A5CBA /* Build configuration list for PBXNativeTarget "JRPictureDemo" */;
 			buildPhases = (
+				AAEC690DD935145150463607 /* [CP] Check Pods Manifest.lock */,
 				653B9FA220BA8333004A5CBA /* Sources */,
 				653B9FA320BA8333004A5CBA /* Frameworks */,
 				653B9FA420BA8333004A5CBA /* Resources */,
+				A4252CB9EF28773E876E99A0 /* [CP] Embed Pods Frameworks */,
+				1ADB6CF1C105373BA2E009DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,16 +353,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1ADB6CF1C105373BA2E009DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4252CB9EF28773E876E99A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JRPictureDemo/Pods-JRPictureDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAEC690DD935145150463607 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JRPictureDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		653B9FA220BA8333004A5CBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65435E6A20BBA738008DFDAF /* JRBigPictureViewController.m in Sources */,
 				653B9FAE20BA8333004A5CBA /* ViewController.m in Sources */,
 				653B9FB920BA8338004A5CBA /* main.m in Sources */,
 				653B9FE620BAAD1F004A5CBA /* JRPictureModel.m in Sources */,
 				653B9FDD20BA941B004A5CBA /* JRPictureFlowLayout.m in Sources */,
 				653B9FEA20BAD372004A5CBA /* JRPictureCollectionViewCell.m in Sources */,
+				65435E6D20BBAE2C008DFDAF /* JRPictureAnimator.m in Sources */,
 				653B9FE020BAA9EA004A5CBA /* JRXMLDataParser.m in Sources */,
 				653B9FAB20BA8333004A5CBA /* AppDelegate.m in Sources */,
 			);
@@ -492,10 +584,12 @@
 		};
 		653B9FD320BA833A004A5CBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B5408DCF4CE97EBB65413E /* Pods-JRPictureDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K57F93BM5Q;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JRPictureDemo/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = JRPictureDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,10 +603,12 @@
 		};
 		653B9FD420BA833A004A5CBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADAE29CB24FA7199037A9D1D /* Pods-JRPictureDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K57F93BM5Q;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JRPictureDemo/Utils/PrefixHeader.pch";
 				INFOPLIST_FILE = JRPictureDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

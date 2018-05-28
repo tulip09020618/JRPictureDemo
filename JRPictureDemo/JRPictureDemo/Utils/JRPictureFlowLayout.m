@@ -91,7 +91,10 @@ static const NSInteger colsCount = 2;
     // cell宽度
     CGFloat cellW = (collectionW - xTotalMargin) / colsCount;
     // cell高度
-    CGFloat cellH = 100 + arc4random() % 80;
+    CGFloat cellH = 100;
+    if (self.itemHeightBlock) {
+        cellH = self.itemHeightBlock(cellW, indexPath);
+    }
     
     // 找出最短的一列和该列的最大Y值(将新的cell添加到最短一列)
     CGFloat maxY = [self.colMaxYs[0] floatValue];

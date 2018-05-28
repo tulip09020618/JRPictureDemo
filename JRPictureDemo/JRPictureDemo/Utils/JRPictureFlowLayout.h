@@ -10,4 +10,9 @@
 
 @interface JRPictureFlowLayout : UICollectionViewFlowLayout
 
+/**
+ 获取cell高度
+ */
+@property (nonatomic, copy) CGFloat (^ itemHeightBlock) (CGFloat itemWidth, NSIndexPath *indexPath);
+
 @end
